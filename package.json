@@ -1,0 +1,46 @@
+{
+  "name": "polyrepo-update",
+  "version": "0.1.0",
+  "description": "Bulk update packages",
+  "main": "index.js",
+  "scripts": {
+    "deps": "dependency-check . && dependency-check . --extra --no-dev",
+    "deps:pkg": "ncu",
+    "deps:update": "ncu -a",
+    "test": "standard && npm run deps && NODE_ENV=test node test",
+    "test:cov": "standard && npm run deps && NODE_ENV=test istanbul cover test.js"
+  },
+  "repository": "polyrepo/polyrepo-update",
+  "keywords": [
+    "bulk",
+    "update",
+    "package",
+    "dependency",
+    "module",
+    "local",
+    "author"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "JSONStream": "^1.0.6",
+    "cliclopts": "^1.1.1",
+    "minimist": "^1.2.0",
+    "npm-check-updates": "^2.2.3",
+    "readdirp": "^2.0.0",
+    "split2": "^1.0.0",
+    "text-table": "^0.2.0",
+    "through2": "^2.0.0"
+  },
+  "devDependencies": {
+    "dependency-check": "^2.5.1",
+    "standard": "^5.3.1",
+    "tape": "^4.2.0"
+  },
+  "files": [
+    "index.js",
+    "bin/*"
+  ],
+  "bin": {
+    "polyrepo-update": "./bin/cli.js"
+  }
+}

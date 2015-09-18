@@ -1,0 +1,12 @@
+Usage: polyrepo-update [options]
+
+Options:
+  -h, --help        Output usage information
+  -v, --version     Output version number
+
+Examples:
+  $ polyrepo-update          # update repos in current dir
+  $ ls . | polyrepo-update   # update a list of repos
+
+Docs: https://github.com/polyrepo/polyrepo-update
+Bugs: https://github.com/polyrepo/polyrepo-update/issues
